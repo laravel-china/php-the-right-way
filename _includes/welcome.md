@@ -49,5 +49,5 @@ _PHP: 您可以在网站上放置 PHP之道 的横幅来支持我们，让 PHP �
 [广告横幅][3]
 
 [1]: https://leanpub.com/phptherightway
-[2]: https://github.com/summerblue/php-the-right-way/tree/gh-pages
+[2]: https://github.com/laravel-china/php-the-right-way/tree/gh-pages
 [3]: /banners.html
