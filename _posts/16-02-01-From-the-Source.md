@@ -6,5 +6,5 @@ anchor:  from_the_source
 
 ## PHP 官方 {#from_the_source_title}
 
-* [PHP 官方网站](http://php.net/)
-* [PHP 官方文档](http://php.net/docs.php)
+* [PHP Website](https://secure.php.net/)
+* [PHP Documentation](https://secure.php.net/docs.php)

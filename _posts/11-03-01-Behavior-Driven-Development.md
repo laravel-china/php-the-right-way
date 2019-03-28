@@ -19,7 +19,7 @@ title: 行为驱动开发
 * [Codeception] 是一个使用 BDD 准则的全栈测试框架。
 
 [Behat]: http://behat.org/
-[Cucumber]: http://cukes.info/
-[PHPSpec]: http://www.phpspec.net/
-[RSpec]: http://rspec.info/
-[Codeception]: http://codeception.com/
+[Cucumber]: https://cucumber.io/
+[PHPSpec]: https://www.phpspec.net/
+[RSpec]: https://rspec.info/
+[Codeception]: https://codeception.com/

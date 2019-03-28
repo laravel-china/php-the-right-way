@@ -44,7 +44,7 @@ log_errors = On
 
 当在生产环境中使用这个配置时，错误信息依旧会被照常存储在 web 服务器的错误日志中，唯一不同的是将不再显示给用户。更多关于设置的信息，请参考 PHP 手册：
 
-* [错误报告](http://php.net/errorfunc.configuration#ini.error-reporting)
-* [显示错误](http://php.net/errorfunc.configuration#ini.display-errors)
-* [显示启动错误](http://php.net/errorfunc.configuration#ini.display-startup-errors)
-* [记录错误](http://php.net/errorfunc.configuration#ini.log-errors)
+* [错误报告](https://secure.php.net/errorfunc.configuration#ini.error-reporting)
+* [显示错误](https://secure.php.net/errorfunc.configuration#ini.display-errors)
+* [显示启动错误](https://secure.php.net/errorfunc.configuration#ini.display-startup-errors)
+* [记录错误](https://secure.php.net/errorfunc.configuration#ini.log-errors)

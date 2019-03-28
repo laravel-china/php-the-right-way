@@ -19,5 +19,3 @@ title: 框架
 许多的框架会在微型框架上加入相当多的功能，我们则称之为全栈框架。这些框架通常会提供 ORMs ，身份认证扩展包等等。
 
 组件框架是多个独立的类库所结合起来的。不同的组件框架可以一起使用在微型或是全栈框架上。
-
-* [热门的 PHP 框架](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
