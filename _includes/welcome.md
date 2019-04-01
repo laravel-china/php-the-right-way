@@ -42,12 +42,5 @@ _PHP: The Right Way_ 被翻译为以下版本：
 
 帮助我们让本网站作为 PHP 新手的最佳资源！[在 GitHub 上贡献][2]
 
-## 推广 {#spread-the-word}
-
-_PHP: 您可以在网站上放置 PHP之道 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
-
-[广告横幅][3]
-
 [1]: https://leanpub.com/phptherightway
-[3]: /banners.html
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
