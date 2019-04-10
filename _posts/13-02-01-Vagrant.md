@@ -20,10 +20,10 @@ Vagrant 还可以在虚拟机和主机上分享文件夹, 意味着你可以在�
 - [Protobox][Protobox]: 是一个基于 vagrant 的一个层, 还有 Web 图形界面, 允许你使用一个 YAML 文件来安装和配置虚拟机里面的软件.
 - [Phansible][Phansible]: 提供了一个简单的 Web 图形界面, 用来创建 Ansible 自动化部署脚本, 专门为 PHP 项目定制.
 
-[Vagrant]: http://vagrantup.com/
-[Puppet]: http://www.puppetlabs.com/
+[Vagrant]: https://www.vagrantup.com/
+[Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
 [Rove]: http://rove.io/
 [Puphpet]: https://puphpet.com/
-[Protobox]: http://getprotobox.com/
+[Protobox]: https://www.getprotobox.com/
 [Phansible]: http://phansible.com/

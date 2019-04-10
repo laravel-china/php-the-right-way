@@ -35,8 +35,8 @@ print_r($data);
 ### 更多关于缓存系统的项目：
 
 * [APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](http://php.net/ref.apc)
-* [Memcached](http://memcached.org/)
-* [Redis](http://redis.io/)
-* [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://php.net/ref.wincache)
+* [APC Functions](https://secure.php.net/ref.apc)
+* [Memcached](https://memcached.org/)
+* [Redis](https://redis.io/)
+* [XCache APIs](https://xcache.lighttpd.net/wiki/XcacheApi)
+* [WinCache Functions](https://secure.php.net/ref.wincache)

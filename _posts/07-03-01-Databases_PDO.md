@@ -58,7 +58,7 @@ $stmt->execute();
 * [了解 PDO 连接]
 
 
-[pdo]: http://php.net/pdo
+[pdo]: https://secure.php.net/pdo
 [SQL Injection]: http://wiki.hashphp.org/Validation
-[了解 PDO]: http://php.net/book.pdo
-[了解 PDO 连接]: http://php.net/pdo.connections
+[了解 PDO]: https://secure.php.net/book.pdo
+[了解 PDO 连接]: https://secure.php.net/pdo.connections

@@ -7,12 +7,38 @@ title: Web 应用程序安全
 
 ## Web 应用程序安全 {#web_application_security_title}
 
-攻击者无时无刻不在准备对你的 Web 应用程序进行攻击，因此提高你的 Web 应用程序的安全性是非常有必要的。幸运的是，来自[开放式 Web 应用程序安全项目][1] (OWASP) 的有心人已经整理了一份包含了已知安全问题和防御方式的全面的清单。这份清单对于具有安全意识的开发者来说是必读的。由 Padraic Brady 著作的 [生存手册：PHP 安全][3] 也是一份很不错的 PHP 安全阅读资料。
+It is very important for every PHP developer to learn [the basics of web application security][4], which can be broken
+down into a handful of broad topics:
 
+1. Code-data separation.
+   * When data is executed as code, you get SQL Injection, Cross-Site Scripting, Local/Remote File Inclusion, etc.
+   * When code is printed as data, you get information leaks (source code disclosure or, in the case of C programs,
+     enough information to bypass [ASLR][5]).
+2. Application logic.
+   * Missing authentication or authorization controls.
+   * Input validation.
+3. Operating environment.
+   * PHP versions.
+   * Third party libraries.
+   * The operating system.
+4. Cryptography weaknesses.
+   * [Weak random numbers][6].
+   * [Chosen-ciphertext attacks][7].
+   * [Side-channel information leaks][8].
 
-* [阅读 OWASP 安全指南][2]
+There are bad people ready and willing to exploit your web application. It is important that you take necessary
+precautions to harden your web application's security. Luckily, the fine folks at
+[The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and
+methods to protect yourself against them. This is a must read for the security-conscious developer. [Survive The Deep End: PHP Security][3] by Padraic Brady is also another good web application security guide for PHP.
+
+* [Read the OWASP Security Guide][2]
 
 
 [1]: https://www.owasp.org/
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
-[3]: http://phpsecurity.readthedocs.org/en/latest/index.html
+[3]: https://phpsecurity.readthedocs.io/en/latest/index.html
+[4]: https://paragonie.com/blog/2015/08/gentle-introduction-application-security
+[5]: http://searchsecurity.techtarget.com/definition/address-space-layout-randomization-ASLR
+[6]: https://paragonie.com/blog/2016/01/on-design-and-implementation-stealth-backdoor-for-web-applications
+[7]: https://paragonie.com/blog/2015/05/using-encryption-and-authentication-correctly
+[8]: http://blog.ircmaxell.com/2014/11/its-all-about-time.html

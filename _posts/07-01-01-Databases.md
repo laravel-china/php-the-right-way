@@ -10,6 +10,6 @@ title:  数据库
 
 原生驱动是在只使用 _一个_ 数据库的情况下的不错的方式，但如果，举个例子来说，你同时使用了 MySQL 和一点点 MSSQL，或者你需要使用 Oracle 的数据库，那你就不能够只使用一个数据库驱动了。你需要为每一个数据库去学习各自不同的 API &mdash; 这样做显然不科学。
 
-[mysqli]: http://php.net/mysqli
-[pgsql]: http://php.net/pgsql
-[mssql]: http://php.net/mssql
+[mysqli]: https://secure.php.net/mysqli
+[pgsql]: https://secure.php.net/pgsql
+[mssql]: https://secure.php.net/mssql

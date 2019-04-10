@@ -14,8 +14,7 @@ title: 用户群
 
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
-[php-ug]: http://php.ug/
+[php-ug]: https://php.ug/
 [NomadPHP]: https://nomadphp.com/
 [PHPWomen]: http://phpwomen.org/
 [php-wiki]: https://wiki.php.net/usergroups
-[php-uglist]: http://php.net/ug.php

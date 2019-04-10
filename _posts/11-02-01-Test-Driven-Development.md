@@ -6,7 +6,7 @@ anchor:  test_driven_development
 
 ## 测试驱动开发 {#test_driven_development_title}
 
-[Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development) 上的定义:
+[Wikipedia](https://wikipedia.org/wiki/Test-driven_development) 上的定义:
 
 > 测试驱动开发 (TDD) 是一种以非常短的开发周期不断迭代的软件开发过程:首先开发者对将要实现的功能或者新的方法写一个失败的自动化测试用例，然后就去写代码来通过这个测试用例，最终通过重构代码让一其达到可接受的水准。**Kent Beck**， 这个技术创造者或者说重新发现者，在2003年声明TDD 鼓励简单的设计和激励信心。
 
@@ -23,12 +23,12 @@ anchor:  test_driven_development
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
-* [Peridot](http://peridot-php.github.io/)
+* [Peridot](https://peridot-php.github.io/)
 * [SimpleTest](http://simpletest.org)
 
 ### 集成测试
 
-[Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development) 上的定义:
+[Wikipedia](https://wikipedia.org/wiki/Integration_testing) 上的定义:
 
 > 集成测试 (有时候称为集成和测试，缩写为 `I&T`)是把各个模块组合在一起进行整体测试的软件测试阶段。它处于单元测试之后，验收测试之前。集成测试将已经经过了单元测试的模块做为输入模块，组合成一个整体，然后运行集成测试用例，然后输出一个可以进行系统测试的系统。
 
@@ -40,7 +40,7 @@ anchor:  test_driven_development
 
 #### 功能测试的工具
 
-- [Selenium](http://docs.seleniumhq.org/)
-- [Mink](http://mink.behat.org/en/latest/)
-- [Codeception](http://codeception.com/) 是一个全栈的测试框架包括验收性测试工具。
-- [Storyplayer](http://datasift.github.io/storyplayer/) 是一个全栈的测试框架并且支持随时创建和销毁测试环境。
+* [Selenium](https://docs.seleniumhq.org/)
+* [Mink](http://mink.behat.org/)
+* [Codeception](https://codeception.com/) 是一个全栈的测试框架包括验收性测试工具。
+* [Storyplayer](https://datasift.github.io/storyplayer/) 是一个全栈的测试框架并且支持随时创建和销毁测试环境。

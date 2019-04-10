@@ -6,28 +6,27 @@ title: Mac 安裝
 
 ## Mac 安装 {#mac_setup_title}
 
-OS X 系统会预装 PHP， 只是一般情况下版本会比最新稳定版低一些。目前
-Mavericks 是 5.4.17、Yosemite 则是 5.5.9，El Capitan 是 5.5.29、Sierra 是 5.6.24， 但在 PHP 7.1 出来之后， 这些往往是不够的。
+macOS 系统会预装 PHP， 只是一般情况下版本会比最新稳定版低一些。
 
-以下介绍几种在 OS X 上安装 PHP 的方法。
+以下介绍几种在 macOS 上安装最新版本 PHP 的方法。
 
 ### 通过 Homebrew 安装 PHP
 
-[Homebrew] 是一个强大的 OS X 专用包管理器， 它可以帮助你轻松的安装 PHP 和各种扩展。
+[Homebrew] 是一个强大的 macOS 专用包管理器， 它可以帮助你轻松的安装 PHP 和各种扩展。
 [Homebrew PHP] 是一个包含与 PHP 相关的 Formulae，能让你通过 homebrew 安装 PHP 的仓库。
 
 
-也就是说, 你可以通过 `brew install` 命令安装 `php53`、`php54`、`php55`、`php56`、`php70`或者 `php71`，并且通过修改 `PATH` 变量来切换各个版本。或者你也可以使用 [brew-php-switcher][brew-php-switcher] 来自动切换。
+也就是说, 你可以通过 `brew install` 命令安装 `php56`、`php70`、`php71`或者 `php72`，并且通过修改 `PATH` 变量来切换各个版本。或者你也可以使用 [brew-php-switcher][brew-php-switcher] 来自动切换。
 
 ### Install PHP via Macports
 ### 通过 Macports 安装 PHP
 
-[MacPorts] 是一个开源的，社区发起的项目，它的目的在于设计一个易于使用的系统，方便编译，安装以及升级 OS X 系统上的 command-line, X11 或者基于 Aqua 的开源软件。
+[MacPorts] 是一个开源的，社区发起的项目，它的目的在于设计一个易于使用的系统，方便编译，安装以及升级 macOS 系统上的 command-line, X11 或者基于 Aqua 的开源软件。
 
 MacPorts 支持预编译的二进制文件，因此你不必每次都重新从源码压缩包编译，如果你的系统没有安装这些包，它会节省你很多时间。
 
 
-此时，你可以通过 `port install` 命名来安装 `php54`, `php55`, `php56`, `php70` 或者 `php71`，比如：
+此时，你可以通过 `port install` 命名来安装 `php56`、`php70`、`php71`或者 `php72`，比如：
 
     sudo port install php56
     sudo port install php71
