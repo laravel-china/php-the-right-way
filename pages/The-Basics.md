@@ -387,4 +387,4 @@ echo $about;
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [性能提示](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+* [相关性能提示](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
