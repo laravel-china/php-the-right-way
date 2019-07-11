@@ -4,12 +4,11 @@ title:  The Basics
 sitemap: true
 ---
 
-# The Basics
+# 基础
 
-## Comparison operators
+## 比较运算符
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+比较运算符在PHP中经常容易被忽略,但是它常常会导致一些意想不到的输出结果。下面是一个常见的例子，在全等比较中，比较整型变量和布尔值。
 
 {% highlight php %}
 <?php
