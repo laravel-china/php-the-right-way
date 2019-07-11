@@ -30,17 +30,15 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/language.operators.comparison)
-* [Comparison table](http://php.net/types.comparisons)
-* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
+* [比较运算符](http://php.net/language.operators.comparison)
+* [PHP 类型比较表](http://php.net/types.comparisons)
+* [比较运算符示例清单](http://phpcheatsheets.com/index.php?page=compare)
 
-## Conditional statements
+## 条件语句
 
-### If statements
+### If 条件判断语句
 
-While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+当我们在函数或类方法中使用 'if/else' 条件判断语句时，存在一个常见的误解,else语句是必须使用的,以保证其他的执行结果得到声明。然而，如果我们的输出结果是去定义返回值，那么else语句就不是必须的，我们可以直接通过return进行返回，使用多余的else语句将变得没有意义。
 
 {% highlight php %}
 <?php
@@ -74,7 +72,7 @@ function test($a)
 
 * [If statements](http://php.net/control-structures.if)
 
-### Switch statements
+### 多重选择语句
 
 Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
 
