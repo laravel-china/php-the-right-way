@@ -12,4 +12,4 @@ title: 注册全局变量
 
 例如：`$_GET['foo']` 可以通过 `$foo` 被访问到，也就是可以对未声明的变量进行覆盖。如果你使用低于 5.4.0 版本的 PHP 的话，请 __确保__ `register_globals` 是被设为 __off__ 的。
 
-* [在 PHP 手册中了解 Register_globals](http://php.net/security.globals)
+* [在 PHP 手册中了解 Register_globals](https://secure.php.net/security.globals)

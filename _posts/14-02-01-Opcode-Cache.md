@@ -22,9 +22,10 @@ PHP 5.5 中自带了 opcode 缓存工具，叫做[Zend OPcache][opcache-book]，
 * [WinCache] (extension for MS Windows Server)
 * [list of PHP accelerators on Wikipedia][PHP_accelerators]
 
-[opcache-book]: http://php.net/book.opcache
-[APC]: http://php.net/book.apc
-[XCache]: http://xcache.lighttpd.net/
+
+[opcache-book]: https://secure.php.net/book.opcache
+[APC]: https://secure.php.net/book.apc
+[XCache]: https://xcache.lighttpd.net/
 [Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
-[WinCache]: http://www.iis.net/download/wincacheforphp
-[PHP_accelerators]: http://en.wikipedia.org/wiki/List_of_PHP_accelerators
+[WinCache]: https://www.iis.net/downloads/microsoft/wincache-extension
+[PHP_accelerators]: https://wikipedia.org/wiki/List_of_PHP_accelerators

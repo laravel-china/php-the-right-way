@@ -10,4 +10,4 @@ title: PHP 大会
 
 [查找 PHP 会议][php-conf]
 
-[php-conf]: http://php.net/conferences/index.php
+[php-conf]: https://secure.php.net/conferences/index.php

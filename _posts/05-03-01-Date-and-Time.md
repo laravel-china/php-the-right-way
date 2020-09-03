@@ -53,10 +53,10 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-一个有名的 API 扩展是 [Carbon](http://carbon.nesbot.com)。Carbon 不仅继承了所有 DateTime 类提供的功能，还提供了更多的人性化功能，例如自然语言时间处理、国际化支持、对象之间执行增减算术。
+一个有名的 API 扩展是 [Carbon](https://carbon.nesbot.com)。Carbon 不仅继承了所有 DateTime 类提供的功能，还提供了更多的人性化功能，例如自然语言时间处理、国际化支持、对象之间执行增减算术。
 
 * [阅读 DateTime][datetime]
 * [阅读日期格式][dateformat] (支持的日期字符串格式)
 
-[datetime]: http://php.net/book.datetime
-[dateformat]: http://php.net/function.date
+[datetime]: https://php.net/book.datetime
+[dateformat]: https://php.net/function.date

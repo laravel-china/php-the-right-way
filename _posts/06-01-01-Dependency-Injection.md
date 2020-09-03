@@ -5,7 +5,7 @@ anchor: dependency_injection
 
 # 依赖注入 {#dependency_injection_title}
 
-出自维基百科 [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
+出自维基百科 [Wikipedia](https://wikipedia.org/wiki/Dependency_injection):
 
 > 依赖注入是一种允许我们从硬编码的依赖中解耦出来，从而在运行时或者编译时能够修改的软件设计模式。
 

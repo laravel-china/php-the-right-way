@@ -90,6 +90,6 @@ class FooModel
 [PHPBridge] 具有一项非常棒的资源叫做[创建一个数据类]。它包含了非常相似的逻辑而且非常适合刚刚习惯数据库交互概念的开发者使用。
 
 
-[MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
-[PHPBridge]: http://phpbridge.org/
-[创建一个数据类]: http://phpbridge.org/intro-to-php/creating_a_data_class
+[MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
+[PHPBridge]: https://phpbridge.org/docs/
+[创建一个数据类]: https://phpbridge.org/intro-to-php/creating_a_data_class
