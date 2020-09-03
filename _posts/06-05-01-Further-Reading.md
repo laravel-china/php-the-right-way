@@ -10,4 +10,4 @@ title: 延伸阅读
 * [What is Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)
 * [Dependency Injection: An analogy](https://mwop.net/blog/260-Dependency-Injection-An-analogy.html)
 * [Dependency Injection: Huh?](https://net.tutsplus.com/tutorials/php/dependency-injection-huh/)
-* [Dependency Injection as a tool for testing](https://philipobenito.github.io/dependency-injection-as-a-tool-for-testing/)
+* [Dependency Injection as a tool for testing](https://medium.com/philipobenito/dependency-injection-as-a-tool-for-testing-902c21c147f1)

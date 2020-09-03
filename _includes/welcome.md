@@ -44,3 +44,4 @@ _PHP: The Right Way_ 被翻译为以下版本：
 
 [1]: https://leanpub.com/phptherightway
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[2]: https://github.com/laravel-china/php-the-right-way/tree/gh-pages
