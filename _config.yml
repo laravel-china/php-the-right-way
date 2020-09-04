@@ -22,5 +22,3 @@ defaults:
 exclude: ['CNAME', 'CONTRIBUTING.md', 'LICENSE', 'README.md', 'pages/example.md', 'vendor']
 
 future: true
-
-theme: jekyll-theme-slate
