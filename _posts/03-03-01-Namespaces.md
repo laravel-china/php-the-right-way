@@ -23,6 +23,7 @@ _命名空间_ 解决了这个问题。如 PHP 手册里所描述，命名空间
 * [阅读 PSR-0][psr0]
 * [阅读 PSR-4][psr4]
 
-[namespaces]: http://php.net/language.namespaces
-[psr0]: http://www.php-fig.org/psr/psr-0/
-[psr4]: http://www.php-fig.org/psr/psr-4/
+[namespaces]: https://secure.php.net/language.namespaces
+[psr0]: https://www.php-fig.org/psr/psr-0/
+[psr4]: https://www.php-fig.org/psr/psr-4/
+

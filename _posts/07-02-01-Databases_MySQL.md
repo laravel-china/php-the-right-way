@@ -21,13 +21,13 @@ PHP 中的 [mysql] 扩展已经不再进行新的开发了，[在 PHP 5.5.0 版�
 
 **如果你是从 [mysql] 升级到 [mysqli]，请尽量不要使用全局替换 `mysql_*` 为 `mysqli_*`。你会错过 mysqli 提供的一些优秀特性，如数据参数绑定，此功能能有效的防止 SQL 注入攻击。[PDO][pdo] 也提供此功能。**
 
-* [PHP: MySQL增强版扩展][mysql_api]
-* [MySQL 开发者 PDO 使用教程][pdo4mysql_devs]
+* [MySQLi Prepared Statements][mysqli_prepared_statements]
+* [PHP: Choosing an API for MySQL][mysql_api]
 
-[mysql]: http://php.net/mysql
-[mysql_deprecated]: http://php.net/migration55.deprecated
-[mysql_removed]: http://php.net/manual/en/migration70.removed-exts-sapis.php
-[mysqli]: http://php.net/mysqli
-[pdo]: http://php.net/pdo
-[mysql_api]: http://php.net/mysqlinfo.api.choosing
-[pdo4mysql_devs]: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+[mysql]: https://secure.php.net/mysqli
+[mysql_deprecated]: https://secure.php.net/migration55.deprecated
+[mysql_removed]: https://secure.php.net/manual/migration70.removed-exts-sapis.php
+[mysqli]: https://secure.php.net/mysqli
+[pdo]: https://secure.php.net/pdo
+[mysql_api]: https://secure.php.net/mysqlinfo.api.choosing
+[mysqli_prepared_statements]: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection

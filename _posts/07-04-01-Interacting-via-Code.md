@@ -30,7 +30,8 @@ function getAllFoos($db) {
     return $db->query('SELECT * FROM table');
 }
 
-foreach (getAllFoos($db) as $row) {
+$results = getAllFoos($db);
+foreach ($results as $row) {
     echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
 }
 {% endhighlight %}
@@ -43,17 +44,17 @@ foreach (getAllFoos($db) as $row) {
 
 {% highlight php %}
 <?php
-$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8mb4', 'username', 'password');
 
-// Make your model available
+// 加载你的模型使其可用
 include 'models/FooModel.php';
 
-// Create an instance
+// 创建一个实例
 $fooModel = new FooModel($db);
-// Get the list of Foos
+// 获取 Foos 列表
 $fooList = $fooModel->getAllFoos();
 
-// Show the view
+// 显示到视图
 include 'views/foo-list.php';
 {% endhighlight %}
 
@@ -81,15 +82,15 @@ class FooModel
 
 {% highlight php %}
 <?php foreach ($fooList as $row): ?>
-    <?= $row['field1'] ?> - <?= $row['field1'] ?>
+    <li><?= $row['field1'] ?> - <?= $row['field1'] ?></li>
 <?php endforeach ?>
 {% endhighlight %}
 
 向大多数现代框架的做法学习是很有必要的，尽管多了一些手动的工作。你可以并不需要每一次都完全这么做，但将太多的表示逻辑层代码和数据库交互掺杂在一些将会为你在想要对程序进行[单元测试](/#unit-testing)时带来真正的麻烦。
 
-[PHPBridge] 具有一项非常棒的资源叫做[创建一个数据类]。它包含了非常相似的逻辑而且非常适合刚刚习惯数据库交互概念的开发者使用。
+[PHPBridge] 具有一项非常棒的资源叫做[创建一个数据类][Creating a Data Class]。它包含了非常相似的逻辑而且非常适合刚刚习惯数据库交互概念的开发者使用。
 
 
-[MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
-[PHPBridge]: http://phpbridge.org/
-[创建一个数据类]: http://phpbridge.org/intro-to-php/creating_a_data_class
+[MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
+[PHPBridge]: https://phpbridge.org/docs/
+[Creating a Data Class]: https://phpbridge.org/intro-to-php/creating_a_data_class

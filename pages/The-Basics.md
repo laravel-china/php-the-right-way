@@ -4,12 +4,11 @@ title:  The Basics
 sitemap: true
 ---
 
-# The Basics
+# 基础
 
-## Comparison operators
+## 比较运算符
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+比较运算符在PHP中经常容易被忽略,但是它常常会导致一些意想不到的输出结果。下面是一个常见的例子，在使用比较运算符，比较整型变量和布尔值。
 
 {% highlight php %}
 <?php
@@ -31,17 +30,15 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/language.operators.comparison)
-* [Comparison table](http://php.net/types.comparisons)
-* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
+* [比较运算符](http://php.net/language.operators.comparison)
+* [PHP 类型比较表](http://php.net/types.comparisons)
+* [比较运算符示例清单](http://phpcheatsheets.com/index.php?page=compare)
 
-## Conditional statements
+## 条件语句
 
-### If statements
+### If 条件判断语句
 
-While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+当我们在函数或类方法中使用 'if/else' 条件判断语句时，存在一个常见的误解,'else'语句是必须使用的,以此保证其他的执行情况有明确的定义。然而，如果我们的输出结果是去定义返回值，那么'else'语句就不是必要的，我们可以直接通过return进行返回，使用多余的else语句将变得毫无意义。
 
 {% highlight php %}
 <?php
@@ -73,16 +70,16 @@ function test($a)
 
 {% endhighlight %}
 
-* [If statements](http://php.net/control-structures.if)
+* [If 语句](http://php.net/control-structures.if)
 
-### Switch statements
+### Switch 多重选择语句
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
+Switch多重选择语句是一个非常好的方式去避免使用大量的'else/if','else',但是使用时也仍需注意以下几点：
 
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
+- Switch 多重选择语句只能进行“值”的比较，不能进行“类型”的比较。 (相当于'==')
+- 语句将遍历每一种case(情况)，直到找到匹配值.如果没有找到匹配值,将会执行默认的设置 (前提是已设置默认值)
+- 进入匹配条件后，如果没有break;(中断退出语句), 将会继续执行匹配，直到找到第一个break;或return;退出方法。
+- 在一个函数,使用'return'代替了使用'break'的必要性,因为它结束了当前函数。
 
 {% highlight php %}
 <?php
@@ -106,13 +103,12 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/control-structures.switch)
+* [多重选择语句](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## 全局命名空间
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
-the global function by using a backslash before the function name.
+当我们使用命名空间的时候，你可能想要找到你写过的被隐藏（没有明确空间）的方法，通过在调用方法前加反斜杠，你将解决这个问题。
 
 {% highlight php %}
 <?php
@@ -131,16 +127,16 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/language.namespaces.global)
-* [Global rules](http://php.net/userlandnaming.rules)
+* [全局空间](http://php.net/language.namespaces.global)
+* [全局规则](http://php.net/userlandnaming.rules)
 
-## Strings
+## 字符串
 
-### Concatenation
+### 字符串连接符
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it is best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
+- 如果你想一行记录超过120个字符的，建议你使用字符串连接符。
+- 为了更好地可读性，最好使用字符串连接符而不是赋值运算符。
+- 当变量在原始范围内,使用字符串连接符新起一行时要对代码进行缩进。
 
 
 {% highlight php %}
@@ -156,21 +152,17 @@ $a = 'Multi-line example'      // concatenation operator (.)
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/language.operators.string)
+* [字符串运算符](http://php.net/language.operators.string)
 
-### String types
+### 字符串类型
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
-strings and they offer slightly different syntax, with slightly different behaviors.
+字符串是一系列字符，听起来很简单。当然，有一些不同类型的字符串，它们提供略有不同的语法，行为略有不同。
 
-#### Single quotes
+#### 单引号
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
-variables.
+单引号常常被用来表示“文字字符串”，而文字字符串不会解析变量和特殊符号。
 
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
-exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
-errors if no variable was found.
+如果你使用单引号，你可能像这样在一个字符串中输入一个变量名: `'some $thing'`, 你将会看到这样的输出`some $thing`. 如果你使用双引号, 他将会尝试解析 `$thing`这个变量名，如果变量没有找到将会报错。
 
 
 {% highlight php %}
@@ -184,12 +176,11 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
+* [单引号](http://php.net/language.types.string#language.types.string.syntax.single)
 
-#### Double quotes
+#### 双引号
 
-Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc.
+双引号好比处理字符串的瑞士军刀，他不仅仅是像前文提到的能处理变量，还能处理分析各种特殊字符, 像 `\n` 换行, `\t` 缩进, etc.
 
 {% highlight php %}
 <?php
@@ -203,7 +194,7 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of mul
                                                                // enables us to use a parsable string
 {% endhighlight %}
 
-Double quotes can contain variables; this is called "interpolation".
+使用双引号可以包含变量;这种操作称之为“插值”.
 
 {% highlight php %}
 <?php
@@ -211,10 +202,9 @@ $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
 {% endhighlight %}
 
-When using interpolation, it is often the case that the variable will be touching another character. This will result
-in some confusion as to what is the name of the variable, and what is a literal character.
+当我们使用插值时,经常会遇到一个变量包含另一个字符串。这样做的结果是将产生一些混乱，无法区分什么是变量名称，什么是文本字符串。
 
-To fix this problem, wrap the variable within a pair of curly brackets.
+为了解决这种问题，我们使用大括号来包裹相对应的变量。
 
 {% highlight php %}
 <?php
@@ -227,7 +217,7 @@ $juice = 'plum';
 echo "I drank some juice made of {$juice}s";    // $juice will be parsed
 
 /**
- * Complex variables will also be parsed within curly brackets
+ * 在大括号内的复杂变量也将被解析
  */
 
 $juice = array('apple', 'orange', 'plum');
@@ -236,10 +226,10 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 * [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Nowdoc syntax （Nowdoc 语法）
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
-use of multi-line strings without the need for concatenating.
+Nowdoc 语法在PHP5.3中被介绍，他的使用方式与单引号相同，唯一区别是它可以使用多行字符串而无需进行连接。
+
 
 {% highlight php %}
 <?php
@@ -262,10 +252,9 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Heredoc syntax （Heredoc 语法）
 
-Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
-strings without the need for concatenating.
+Heredoc 语法 插入行为与双引号相同，也适用于多行字符串，同时不需要进行字符串的连接。
 
 {% highlight php %}
 <?php
@@ -290,29 +279,43 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
-### Which is quicker?
+> 应该注意的是，多行字符串也可以通过在语句中跨多行继续来形成。 _例如_
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
-fundamentally not true.
+{% highlight php %}
+$str = "
+Example of string
+spanning multiple lines
+using statement syntax.
+$a are parsed.
+";
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
-or double quoted string will be entirely identical. Neither are quicker.
+/**
+ * 输出:
+ *
+ * 字符串示例
+ * 跨越多行
+ * 使用语句语法。
+ * $a 被解析。
+ */
+{% endhighlight %}
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
-results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
-values, interpolating is minutely faster.
+### 哪一种更快?
 
-Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+这里有一种谣言就是单引号会比双引号在使用上稍快一些，实际上这并不是真是的。
 
-* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+如果你定义了一个简单字符串，没有使用任何复杂变量和特殊字符串，使用单引号和双引号的效果是相同的，两者并不会谁更快。
 
 
-## Ternary operators
+如果要连接任意类型的多个字符串，或在双引号字符串中进行插值，则结果可能会有所不同。如果您使用的是少量的值，那么进行连接速度会稍微快一点。对于大量的值，进行插值操作速度要快得多。
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+无论你使用字符串做什么，这些类型都不会对你的应用产生任何明显的影响。尝试重写代码以使用其他方式是徒劳，所以请避免过度优化，除非您真正了解差异的含义和影响。
+
+* [驳斥单引号的性能谣言](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+
+
+## 三元运算符 
+
+三元运算符是精简代码的好方法，但也往往存在着过度使用.当三元运算符可堆叠/嵌套时，建议保持每一行的可读性。
 
 {% highlight php %}
 <?php
@@ -320,14 +323,14 @@ $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
 {% endhighlight %}
 
-In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
+相比之下，这里有一个例子，为了缩减代码量而牺牲了所有形式的的代码可读性。
 
 {% highlight php %}
 <?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+使用三元运算符的正确语法，来获得返回值。
 
 {% highlight php %}
 <?php
@@ -341,42 +344,38 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
 {% endhighlight %}
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+有一点需要被提醒，你不需要使用三元运算符来进行布尔值的判断和返回。例子如下：
 
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? true : false; // Will return true or false if $a == 3
+return ($a == 3) ? true : false; // Will return true if $a == 3 or false
 
 // vs
 
 $a = 3;
-return $a == 3; // Will return true or false if $a == 3
+return $a == 3; // Will return true if $a == 3 or false
 
 {% endhighlight %}
 
-This can also be said for all operations(===, !==, !=, == etc).
+同理适用于以下运算符(===, !==, !=, == etc).
 
-#### Utilising brackets with ternary operators for form and function
+#### 在三元运算符中对表达式和方法使用括号
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
-within blocks of statements. An example of when there is no requirement to use bracketing is:
+当使用三元运算符时，括号可以帮助提高代码可读性，也可以帮助在块内声明。不需要使用括号的示例如下：
 
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
+return ($a == 3) ? "yay" : "nope"; // return yay if $a == 3 or nope
 
 // vs
 
 $a = 3;
-return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
+return $a == 3 ? "yay" : "nope"; // return yay if $a == 3 or nope
 {% endhighlight %}
 
-Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
-as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
-also true.
+括号的包围还将我们要检查块的语句块视为一个整体。如下面这个例子，如果两个代码块（$ a == 3和$ b == 4）都为真且$ c == 5也成立，则返回true。
 
 {% highlight php %}
 <?php
@@ -390,16 +389,13 @@ Another example is the snippet below which will return true if ($a != 3 AND $b !
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
-Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
-Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
+从PHP5.3开始，可以省略三元运算符的中间部分。如果expr1的计算结果为TRUE，则表达式“expr1？：expr3”将返回expr1，否则返回expr3。
 
-* [Ternary operators](http://php.net/language.operators.comparison)
+* [三元运算符](http://php.net/language.operators.comparison)
 
-## Variable declarations
+## 变量声明
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let us say an example
-string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
+有时, 程序员们尝试让他们的代码看起来更整洁，通过不同的名称声明一个预定义变量。但是这也将消耗两倍的内存。对于下面这个例子,我们书写一个字符串将包含1MB的数据量。但是因为拷贝变量，当你在执行脚本的时候内存的消耗将增加到2MB。
 
 {% highlight php %}
 <?php
@@ -411,4 +407,4 @@ echo $about;
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+* [相关性能提示](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)

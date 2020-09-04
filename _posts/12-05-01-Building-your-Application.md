@@ -27,7 +27,7 @@ anchor:  building_and_deploying_your_application
 
 [Capistrano] 是一个为 *中高级程序员* 准备的系统，以一种结构化、可复用的方式在一台或多台远程机器上执行命令。对于部署 Ruby on Rails 的应用，它提供了预定义的配置，不过也可以用它来 **部署 PHP 应用** 。如果要成功的使用 Capistrano ，需要一定的 Ruby 和 Rake 的知识。
 
-对 Capistrano 感兴趣的 PHP 开发者可以阅读 Dave Gardner 的博文 [PHP Deployment with Capistrano][phpdeploy_capistrano] ，来作为一个很好的开始。
+[Ansistrano]是几个 Ansible 角色，可轻松管理脚本编写应用程序（例如PHP，Python和Ruby）的部署过程（部署和回滚）。 它是[Capistrano]的 Ansible 端口。它已经被很多PHP公司所使用。
 
 [Rocketeer] 从 Laravel 框架中得到了很多灵感。 目标是默认智能化配置、高速、优雅的自动化部署工具。他支持多服务器，多阶段，并行部署等功能。工具的扩展性极强，并且是由 PHP 编写。
 
@@ -38,7 +38,6 @@ anchor:  building_and_deploying_your_application
 #### 延伸阅读：
 
 * [Automate your project with Apache Ant][apache_ant_tutorial]
-* [Expert PHP Deployments][expert_php_deployments] - free book on deployment with Capistrano, Phing and Vagrant.
 * [Deploying PHP Applications][deploying_php_applications] - paid book on best practices and tools for PHP deployment.
 
 ### 服务器布置 Server Provisioning
@@ -75,28 +74,29 @@ anchor:  building_and_deploying_your_application
 
 * [使用 Jenkins 进行持续集成][Jenkins]
 * [使用 PHPCI 进行持续集成][PHPCI]
+* [使用 PHP Censor 进行持续集成][PHP Censor]
 * [使用 Teamcity 进行持续集成][Teamcity]
 
-[buildautomation]: http://en.wikipedia.org/wiki/Build_automation
-[Phing]: http://www.phing.info/
-[Apache Ant]: http://ant.apache.org/
-[Capistrano]: https://github.com/capistrano/capistrano/wiki
-[phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
-[phpdeploy_deployer]: http://www.sitepoint.com/deploying-php-applications-with-deployer/
+[buildautomation]: https://wikipedia.org/wiki/Build_automation
+[Phing]: https://www.phing.info/
+[Apache Ant]: https://ant.apache.org/
+[Capistrano]: http://capistranorb.com/
+[Ansistrano]: https://ansistrano.com
+[phpdeploy_deployer]: https://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
 [Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
-[apache_ant_tutorial]: http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/
+[apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
 [Travis CI]: https://travis-ci.org/
-[Jenkins]: http://jenkins-ci.org/
-[PHPCI]: http://www.phptesting.org/
-[Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: http://deployer.org/
+[Jenkins]: https://jenkins.io/
+[PHPCI]: https://www.phptesting.org/
+[PHP Censor]: http://php-censor.info/
+[Teamcity]: https://www.jetbrains.com/teamcity/
+[Deployer]: https://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/
-[Magallanes]: http://magephp.com/
-[expert_php_deployments]: http://viccherubini.com/assets/Expert-PHP-Deployments.pdf
-[deploying_php_applications]: http://www.deployingphpapplications.com
+[Magallanes]: https://www.magephp.com/
+[deploying_php_applications]: https://deployingphpapplications.com/
 [Ansible]: https://www.ansible.com/
 [Puppet]: https://puppet.com/
 [ansible_for_devops]: https://leanpub.com/ansible-for-devops

@@ -25,7 +25,7 @@ CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需
 {% highlight php %}
 <?php
 if($argc != 2) {
-    echo "Usage: php hello.php [name].\n";
+    echo "Usage: php hello.php <name>.\n";
     exit(1);
 }
 $name = $argv[1];
@@ -41,18 +41,16 @@ PHP 会在脚本运行时根据参数设置两个特殊的变量，[`$argc`][arg
 
 {% highlight console %}
 > php hello.php
-Usage: php hello.php [name]
+Usage: php hello.php <name>
 > php hello.php world
 Hello, world
 {% endhighlight %}
 
  * [学习如何在命令行运行 PHP][php-cli]
- * [学习如何在 Windows 环境下运行 PHP 命令行程序][php-cli-windows]
 
-[phpinfo]: http://php.net/function.phpinfo
-[cli-options]: http://php.net/features.commandline.options
-[argc]: http://php.net/reserved.variables.argc
-[argv]: http://php.net/reserved.variables.argv
-[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
-[php-cli]: http://php.net/features.commandline
-[php-cli-windows]: http://php.net/install.windows.commandline
+[phpinfo]: https://secure.php.net/function.phpinfo
+[cli-options]: https://secure.php.net/features.commandline.options
+[argc]: https://secure.php.net/reserved.variables.argc
+[argv]: https://secure.php.net/reserved.variables.argv
+[exit-codes]: https://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
+[php-cli]: https://secure.php.net/features.commandline.options

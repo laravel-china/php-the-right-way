@@ -64,7 +64,7 @@ title: 编译模板
 
 
 [article_templating_engines]: http://fabien.potencier.org/article/34/templating-engines-in-php
-[Twig]: http://twig.sensiolabs.org/
+[Twig]: https://twig.symfony.com/
 [Brainy]: https://github.com/box/brainy
-[Smarty]: http://www.smarty.net/
-[Mustache]: http://mustache.github.io/
+[Smarty]: https://www.smarty.net/
+[Mustache]: https://mustache.github.io/

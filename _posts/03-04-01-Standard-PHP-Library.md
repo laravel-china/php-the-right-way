@@ -11,5 +11,6 @@ PHP 标准库 (Standard PHP Library 简写为 SPL) 随着 PHP 一起发布，提
 * [阅读 SPL][spl]
 * [Lynda.com 上的 SPL 视频教程(付费)][spllynda]
 
-[spl]: http://php.net/book.spl
-[spllynda]: http://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+[spl]: https://secure.php.net/book.spl
+[spllynda]: https://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+
