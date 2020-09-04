@@ -32,7 +32,7 @@ _PHP: The Right Way_ 被翻译为以下版本：
 * [한국어판](http://modernpug.github.io/php-the-right-way)
 * [日本語](http://ja.phptherightway.com)
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
-* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
+* [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
 ## 书本
 
@@ -40,8 +40,8 @@ _PHP: The Right Way_ 被翻译为以下版本：
 
 ## 如何参与 {#how-to-contribute}
 
-帮助我们让本网站作为 PHP 新手的最佳资源！[在 GitHub 上贡献][2]
+帮助我们让本网站作为 PHP 新手的最佳资源！[在 GitHub 上贡献 【English】][2]  [【中文】][3]
 
 [1]: https://leanpub.com/phptherightway
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: https://github.com/laravel-china/php-the-right-way/tree/gh-pages
+[3]: https://github.com/laravel-china/php-the-right-way/tree/gh-pages

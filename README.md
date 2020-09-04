@@ -1,11 +1,11 @@
 # PHP 之道
 
-[Github 在线地址](https://leo-yi.github.io/php-the-right-way/)
+[Github 在线地址](https://jackyban.github.io/php-the-right-way/)
 [国内在线地址](https://show.oyifan.com/php-the-right-way/)
 
-> 此项目由 [Leo Yi](https://blog.oyifan.com/ ) 个人维护，请维护互联网开放精神，转载请保留出处。
-
-> 此项目 fork [Laravel China 社区](https://laravel-china.org/ ) 维护的仓库，因为此仓库2年不更新，提PR也没反应，才决定自己建立这个站，感谢 summer 做出的贡献。
+> 此项目 fork 自[Laravel China 社区](https://laravel-china.org/ ) 维护的仓库，但此仓库已很久不更新了，但还是感谢 summer 做出的贡献。。
+> 在 summer 的PR里找到了 [Leo Yi](https://blog.oyifan.com/ ) 提交的最新版本，便合并了过来。也感谢 Leo Yi 的整理。
+> 在 Leo Yi 仓库的基础上，从原版仓库重新整理了最新版本，有时间会持续更新，也希望有人可以帮助提交PR。
 
 ## 概览
 

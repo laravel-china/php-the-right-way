@@ -25,7 +25,7 @@ CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需
 {% highlight php %}
 <?php
 if($argc != 2) {
-    echo "Usage: php hello.php [name].\n";
+    echo "Usage: php hello.php <name>.\n";
     exit(1);
 }
 $name = $argv[1];
@@ -41,7 +41,7 @@ PHP 会在脚本运行时根据参数设置两个特殊的变量，[`$argc`][arg
 
 {% highlight console %}
 > php hello.php
-Usage: php hello.php [name]
+Usage: php hello.php <name>
 > php hello.php world
 Hello, world
 {% endhighlight %}

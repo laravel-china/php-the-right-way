@@ -23,7 +23,6 @@ PHP 中的 [mysql] 扩展已经不再进行新的开发了，[在 PHP 5.5.0 版�
 
 * [MySQLi Prepared Statements][mysqli_prepared_statements]
 * [PHP: Choosing an API for MySQL][mysql_api]
-* [PDO Tutorial for MySQL Developers][pdo4mysql_devs]
 
 [mysql]: https://secure.php.net/mysqli
 [mysql_deprecated]: https://secure.php.net/migration55.deprecated
@@ -31,5 +30,4 @@ PHP 中的 [mysql] 扩展已经不再进行新的开发了，[在 PHP 5.5.0 版�
 [mysqli]: https://secure.php.net/mysqli
 [pdo]: https://secure.php.net/pdo
 [mysql_api]: https://secure.php.net/mysqlinfo.api.choosing
-[pdo4mysql_devs]: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
 [mysqli_prepared_statements]: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection

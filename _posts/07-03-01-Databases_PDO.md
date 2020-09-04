@@ -51,14 +51,14 @@ $stmt->execute();
 
 对于写入操作，例如 INSERT 或者 UPDATE，进行[数据过滤](#data_filtering)并对其他内容进行清理（去除 HTML 标签，Javascript 等等）是尤其重要的。PDO 只会为 SQL 进行清理，并不会为你的应用做任何处理。
 
-* [了解 PDO]
+* [了解 PDO][Learn about PDO]
 
 你也应该知道数据库连接有时会耗尽全部资源，如果连接没有被隐式地关闭的话，有可能会造成可用资源枯竭的情况。不过这通常在其他语言中更为常见一些。使用 PDO 你可以通过销毁（destroy）对象，也就是将值设为 NULL，来隐式地关闭这些连接，确保所有剩余的引用对象的连接都被删除。如果你没有亲自做这件事情，PHP 会在你的脚本结束的时候自动为你完成 —— 除非你使用的是持久链接。
 
-* [了解 PDO 连接]
+* [了解 PDO 连接][Learn about PDO connections]
 
 
 [pdo]: https://secure.php.net/pdo
 [SQL Injection]: http://wiki.hashphp.org/Validation
-[了解 PDO]: https://secure.php.net/book.pdo
-[了解 PDO 连接]: https://secure.php.net/pdo.connections
+[Learn about PDO]: https://secure.php.net/book.pdo
+[Learn about PDO connections]: https://secure.php.net/pdo.connections

@@ -12,7 +12,7 @@ title: 复杂的问题
 
 顾名思义，一个系统通过组织控制和对象的完全分离来实现"控制反转"。对于依赖注入，这就意味着通过在系统的其他地方控制和实例化依赖对象，从而实现了解耦。
 
-一些 PHP 框架很早以前就已经实现控制反转了，但是问题是，应该反转哪部分以及到什么程度？比如， MVC 框架通常会提供超类或者基本的控制器类以便其他控制器可以通过继承来获得相应的依赖。这就是控制反转的例子，但是这种方法是直接移除了依赖而不是减轻了依赖。
+一些 PHP 框架很早以前就已经实现控制反转了，但是问题是，我们应该反转哪部分以及到什么程度？比如， MVC 框架通常会提供超类或者基本的控制器类以便其他控制器可以通过继承来获得相应的依赖。这就是控制反转的例子，但是这种方法是直接移除了依赖而不是减轻了依赖。
 
 依赖注入允许我们通过按需注入的方式更加优雅地解决这个问题，完全不需要任何耦合。
 
@@ -20,7 +20,9 @@ title: 复杂的问题
 
 依赖反转准则是面向对象设计准则 S.O.L.I.D 中的 "D" ,倡导 *"依赖于抽象而不是具体"*。简单来说就是依赖应该是接口/约定或者抽象类，而不是具体的实现。我们能很容易重构前面的例子，使之遵循这个准则
 
-#### Single Responsibility Principle
+### 面向对象五大原则（S.O.L.I.D）
+
+#### 单一替换原则
 
 The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
 only one reason to change.” This means that every class should _only_ have responsibility over a single part of the
@@ -40,7 +42,7 @@ The largest benefit of this approach is that we can very easily extend our code 
 having to modify existing code, meaning that we can reduce QA time, and the risk for negative impact to the application
 is substantially reduced. We can deploy new code, faster, and with more confidence.
 
-#### Liskov Substitution Principle
+#### 里氏替换原则
 
 The Liskov Substitution Principle is about subtyping and inheritance. It states that “Child classes should never break
 the parent class’ type definitions.” Or, in Robert C. Martin’s words, “Subtypes must be substitutable for their base
@@ -53,7 +55,7 @@ interface, we will already know and understand what the `embed()` method will do
 is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
 type (e.g., `FileInterface`) to another we don't need to change anything else in our program.
 
-#### Interface Segregation Principle
+#### 接口隔离原则
 
 The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
 should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
@@ -65,7 +67,7 @@ class would not. Conversely, a `Motorcycle` or `Tricycle` class would be interes
 `Car` or `Bus` class would not. There is no need to have all of these types of vehicles implement support for both
 `steeringWheel()` as well as `handlebars()`, so we should break-apart the source interface.
 
-#### Dependency Inversion Principle
+#### 依赖倒置原则
 
 The Dependency Inversion Principle is about removing hard-links between discrete classes so that new functionality can
 be leveraged by passing a different class. It states that one should *"Depend on Abstractions. Do not depend on

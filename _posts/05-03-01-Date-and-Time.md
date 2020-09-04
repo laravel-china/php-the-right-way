@@ -58,5 +58,5 @@ foreach ($periodIterator as $date) {
 * [阅读 DateTime][datetime]
 * [阅读日期格式][dateformat] (支持的日期字符串格式)
 
-[datetime]: https://php.net/book.datetime
-[dateformat]: https://php.net/function.date
+[datetime]: https://secure.php.net/book.datetime
+[dateformat]: https://secure.php.net/function.date

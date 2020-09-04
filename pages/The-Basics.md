@@ -279,6 +279,26 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
+> 应该注意的是，多行字符串也可以通过在语句中跨多行继续来形成。 _例如_
+
+{% highlight php %}
+$str = "
+Example of string
+spanning multiple lines
+using statement syntax.
+$a are parsed.
+";
+
+/**
+ * 输出:
+ *
+ * 字符串示例
+ * 跨越多行
+ * 使用语句语法。
+ * $a 被解析。
+ */
+{% endhighlight %}
+
 ### 哪一种更快?
 
 这里有一种谣言就是单引号会比双引号在使用上稍快一些，实际上这并不是真是的。
@@ -329,12 +349,12 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? true : false; // Will return true or false if $a == 3
+return ($a == 3) ? true : false; // Will return true if $a == 3 or false
 
 // vs
 
 $a = 3;
-return $a == 3; // Will return true or false if $a == 3
+return $a == 3; // Will return true if $a == 3 or false
 
 {% endhighlight %}
 
@@ -347,12 +367,12 @@ return $a == 3; // Will return true or false if $a == 3
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
+return ($a == 3) ? "yay" : "nope"; // return yay if $a == 3 or nope
 
 // vs
 
 $a = 3;
-return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
+return $a == 3 ? "yay" : "nope"; // return yay if $a == 3 or nope
 {% endhighlight %}
 
 括号的包围还将我们要检查块的语句块视为一个整体。如下面这个例子，如果两个代码块（$ a == 3和$ b == 4）都为真且$ c == 5也成立，则返回true。

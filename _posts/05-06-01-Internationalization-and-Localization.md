@@ -403,8 +403,8 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [symfony]: https://symfony.com/doc/current/components/translation.html
 [zend]: https://docs.zendframework.com/zend-i18n/translation
 [laravel]: https://laravel.com/docs/master/localization
-[yii]: https://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
-[intl]: https://br2.php.net/manual/en/intro.intl.php
+[yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
+[intl]: https://php.net/manual/en/intro.intl.php
 [ICU project]: https://www.icu-project.org
 [symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
 

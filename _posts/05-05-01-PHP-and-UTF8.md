@@ -28,7 +28,7 @@ _本章是由 [Alex Cabal](https://alexcabal.com/) 最初撰写在 [PHP Best Pra
 
 最后，如果你所编写的是分布式的应用程序并且不能确定 `mbstring` 扩展一定开启的话，可以考虑使用 [patchwork/utf8] Composer 包。它会在 `mbstring` 可用时自动使用，否则自动切换回非 UTF-8 函数。
 
-[Multibyte String Extension]: https://php.net/book.mbstring
+[Multibyte String Extension]: https://secure.php.net/book.mbstring
 [patchwork/utf8]: https://packagist.org/packages/patchwork/utf8
 
 ### 数据库层面的 UTF-8
@@ -43,31 +43,38 @@ _本章是由 [Alex Cabal](https://alexcabal.com/) 最初撰写在 [PHP Best Pra
 
 使用 `mb_http_output()` 函数来确保 PHP 向浏览器输出 UTF-8 格式的字符串。
 
-随后浏览器需要接收 HTTP 应答来指定页面是由 UTF-8 进行编码的。以前这一步是通过在页面 `<head>` 标签下包含[字符集 `<meta>` 标签](https://htmlpurifier.org/docs/enduser-utf8.html)实现的，这是一种可行的方式。但更好的做法是在 `Content-Type` 响应头中进行设置，因为这样做的速度会[更快](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly)。
+然后，通过 HTTP 响应告知浏览器该页面是由 UTF-8 进行编码的。如今，常见的是在 HTTP 响应标头 `Content-Type` 中设置字符集，因为这样做的速度会[更快](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly)。如下所示：
 
 {% highlight php %}
 <?php
-// Tell PHP that we're using UTF-8 strings until the end of the script
+header('Content-Type: text/html; charset=UTF-8')
+{% endhighlight %}
+
+以前这一步是通过在页面 `<head>` 标签下包含[字符集 `<meta>` 标签](https://htmlpurifier.org/docs/enduser-utf8.html)实现的，这是一种可行的方式。
+
+{% highlight php %}
+<?php
+// 告诉PHP在脚本结束之前我们一直在使用UTF-8字符串
 mb_internal_encoding('UTF-8');
 $utf_set = ini_set('default_charset', 'utf-8');
 if (!$utf_set) {
     throw new Exception('could not set default_charset to utf-8, please ensure it\'s set on your system!');
 }
 
- 
-// Tell PHP that we'll be outputting UTF-8 to the browser
+
+// 告诉PHP我们将向浏览器输出UTF-8
 mb_http_output('UTF-8');
- 
-// Our UTF-8 test string
+
+// 我们的UTF-8测试字符串
 $string = 'Êl síla erin lû e-govaned vîn.';
- 
-// Transform the string in some way with a multibyte function
-// Note how we cut the string at a non-Ascii character for demonstration purposes
+
+// 使用多字节函数以某种方式转换字符串
+// 请注意，为了演示的目的，我们如何将字符串截断为非Ascii字符
 $string = mb_substr($string, 0, 15);
- 
-// Connect to a database to store the transformed string
-// See the PDO example in this document for more information
-// Note the `charset=utf8mb4` in the Data Source Name (DSN)
+
+// 连接到数据库以存储转换后的字符串
+// 有关更多信息，请参见本文档中的PDO示例
+// 注意数据源名称（DSN）中的 `charset=utf8mb4`
 $link = new PDO(
     'mysql:host=your-hostname;dbname=your-db;charset=utf8mb4',
     'your-username',
@@ -77,31 +84,32 @@ $link = new PDO(
         PDO::ATTR_PERSISTENT => false
     )
 );
- 
-// Store our transformed string as UTF-8 in our database
-// Your DB and tables are in the utf8mb4 character set and collation, right?
+
+// 将转换后的字符串存储为数据库中的UTF-8
+// 您的数据库和表位于utf8mb4字符集和排序规则中，对吗？
 $handle = $link->prepare('insert into ElvishSentences (Id, Body, Priority) values (default, :body, :priority)');
 $handle->bindParam(':body', $string, PDO::PARAM_STR);
 $priority = 45;
-$handle->bindParam(':priority', $priority, PDO::PARAM_INT); // explicitly tell pdo to expect an int
+$handle->bindParam(':priority', $priority, PDO::PARAM_INT); // 明确告诉pdo期望一个int
 $handle->execute();
- 
-// Retrieve the string we just stored to prove it was stored correctly
+
+// 检索我们刚刚存储的字符串以证明它已正确存储
 $handle = $link->prepare('select * from ElvishSentences where Id = :id');
 $id = 7;
 $handle->bindParam(':id', $id, PDO::PARAM_INT);
 $handle->execute();
- 
-// Store the result into an object that we'll output later in our HTML
+
+// 将结果存储到我们稍后将在HTML中输出的对象中
+// 该对象不会杀死您的内存，因为它会及时获取到数据
 // This object won't kill your memory because it fetches the data Just-In-Time to
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
-// An example wrapper to allow you to escape data to html
+// 包装器示例，可让您将数据转义为html
 function escape_to_html($dirty){
     echo htmlspecialchars($dirty, ENT_QUOTES, 'UTF-8');
 }
 
-header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default_charset is set to utf-8 already
+header('Content-Type: text/html; charset=UTF-8'); // 如果您的 default_charset 已设置为 utf-8，则不需要再次设置
 ?><!doctype html>
 <html>
     <head>
@@ -111,7 +119,7 @@ header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default
     <body>
         <?php
         foreach($result as $row){
-            escape_to_html($row->Body);  // This should correctly output our transformed UTF-8 string to the browser
+            escape_to_html($row->Body);  // 这应该正确地将我们转换后的UTF-8字符串输出到浏览器
         }
         ?>
     </body>
